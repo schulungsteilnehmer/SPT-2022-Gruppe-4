@@ -1,16 +1,16 @@
 
 
-Lotte Habicht 
-15.5.22
+Gabi Schmidt 
+15.06.2022
 
-Biologie	15
-Mathe	8
-Geographie	15
-Sport	9
-Politik	9
-Chemie	7
-Physik	10
-Englisch	13
-Fehltage: 14
+Mathe(LK) 	4
+Physik(LK) 	7
+Englisch	15
+Tauchen	7
+Schwimmen	4
+Singen	3
+Luftfahrt	6
+Politik	8
+Fehltage: 17
 Davon unentschuldigt: 3
-Schüler wird versetzt.
+Schüler wird nicht versetzt.

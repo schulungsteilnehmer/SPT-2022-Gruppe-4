@@ -19,13 +19,16 @@ namespace Zeugnisse
 		public static void Main(string[] args)
 		{
 			string name;
-			string datum;
+			DateTime datum = new DateTime{};
 			List<string> fächer = new List<string>{};
 			List<int> noten = new List<int>{};
 			Console.WriteLine("Bitte geben Sie den Namen des Schühlers ein (z.B. Lasse Schmidt)");
 			name = Console.ReadLine();
 			Console.WriteLine("Bitte geben Sie das Zeugnisausstellungsdatum ein (z.B. 14.03.2024)");
-			datum = Console.ReadLine();
+			while (!DateTime.TryParse(Console.ReadLine(), out datum))
+			{
+				Console.WriteLine("Bitte Datum in gültigem Format (dd.MM.yyyy) eingeben!");
+			}				
 			
 			for (int i = 0; i < 8; i++) {
 				if(i==0)Console.WriteLine("Bitte geben Sie den Leistungkurs 1 ein.(z.B. Mathe)");
@@ -34,7 +37,12 @@ namespace Zeugnisse
 				string input = Console.ReadLine();
 				fächer.Add(input);
 				Console.WriteLine("Bitte geben die Note (0-15) für das Fach {0} ein.",input);
-				noten.Add(Int32.Parse(Console.ReadLine()));
+				int note = -1;
+				while (!Int32.TryParse(Console.ReadLine(), out note) || !((note <= 15) && (note >= 0)))
+				{
+					Console.WriteLine("Bitte Note von 0-15 eingeben!");
+				}	
+				noten.Add(note);
 			}
 			Console.WriteLine("Bitte geben Sie die Fehltage des Schühlers ein (z.B.31)");
 			int fehltage = Int32.Parse(Console.ReadLine());
@@ -59,12 +67,15 @@ namespace Zeugnisse
 			if (choice == 'y' || choice =='Y') ZeugnisAusgeben(name, datum, fächer, noten, fehltage, unentschuldigteFehltage, versetzt);
 		}
 		
-		public static void ZeugnisAusgeben(string name, string datum, List<string> fächer, List<int> noten, int fehltage, int unentschuldigteFehltage, bool versetzt)
+		public static void ZeugnisAusgeben(string name, DateTime datum, List<string> fächer, List<int> noten, int fehltage, int unentschuldigteFehltage, bool versetzt)
 			{
 			string path = "C:\\Users\\schulung.SCHULUNGNB-03\\Documents\\SPT-2022-Gruppe-4\\Zeugnis.txt";
 			StreamWriter writer = new StreamWriter(path);
-			writer.WriteLine("\n\n" + name + " \n" + datum + "\n");
-			for (int i = 0; i < 8; i++) {
+			writer.WriteLine("\n\n" + name + " \n" + datum.ToString() + "\n");
+			for (int i = 0; i < 2; i++) {
+				writer.WriteLine(fächer[i] + "(LK) \t" + noten[i]);
+			}
+			for (int i = 2; i < 8; i++) {
 				writer.WriteLine(fächer[i] + "\t" + noten[i]);
 			}
 			writer.WriteLine("Fehltage: " + fehltage);
