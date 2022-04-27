@@ -1,0 +1,16 @@
+
+
+Lotte Habicht 
+15.5.22
+
+Biologie	15
+Mathe	8
+Geographie	15
+Sport	9
+Politik	9
+Chemie	7
+Physik	10
+Englisch	13
+Fehltage: 14
+Davon unentschuldigt: 3
+Schüler wird versetzt.

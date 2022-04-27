@@ -1,0 +1,6 @@
+C:\Users\schulung.SCHULUNGNB-03\Documents\SharpDevelop Projects\Zeugnisse\Zeugnisse\obj\Debug\Zeugnisse.csprojResolveAssemblyReference.cache
+C:\Users\schulung.SCHULUNGNB-03\Documents\SharpDevelop Projects\Zeugnisse\Zeugnisse\bin\Debug\Zeugnisse.exe.config
+C:\Users\schulung.SCHULUNGNB-03\Documents\SharpDevelop Projects\Zeugnisse\Zeugnisse\bin\Debug\Zeugnisse.exe
+C:\Users\schulung.SCHULUNGNB-03\Documents\SharpDevelop Projects\Zeugnisse\Zeugnisse\bin\Debug\Zeugnisse.pdb
+C:\Users\schulung.SCHULUNGNB-03\Documents\SharpDevelop Projects\Zeugnisse\Zeugnisse\obj\Debug\Zeugnisse.exe
+C:\Users\schulung.SCHULUNGNB-03\Documents\SharpDevelop Projects\Zeugnisse\Zeugnisse\obj\Debug\Zeugnisse.pdb
