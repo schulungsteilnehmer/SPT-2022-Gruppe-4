@@ -1,16 +1,17 @@
 
 
-GG 
-20.01.2012 00:00:00
+Georg-Peter Johnson 
+14.03.2018
 
-Mathe(LK) 	14
-teq(LK) 	1
-f	1
-f	1
-f	1
-f	1
-f	1
-f	1
-Fehltage: 400
-Davon unentschuldigt: 200
-Schüler wird nicht versetzt.
+Biologie(LK) 	15
+Chemie(LK) 	14
+Geographie	13
+Englisch	12
+Sport	11
+Ethik	10
+Mathematik	9
+Religion	8
+Notendurchschnitt: 1,5
+Fehltage: 17
+Davon unentschuldigt: 4
+Schüler wird versetzt.

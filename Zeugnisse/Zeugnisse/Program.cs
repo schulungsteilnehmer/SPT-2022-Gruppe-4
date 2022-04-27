@@ -72,10 +72,11 @@ namespace Zeugnisse
 			
 			
 			
-			Console.WriteLine("\n\n" + name + " \n" + datum + "\n");
+			Console.WriteLine("\n\n" + name + " \n" + datum.ToString("dd.MM.yyyy") + "\n");
 			for (int i = 0; i < 8; i++) {
 				Console.WriteLine(fächer[i] + "\t" + noten[i]);
 			}
+			Console.WriteLine("Notendurchschnitt: {0}", DurchschnittBerechnen(noten));
 			Console.WriteLine("Fehltage: " + fehltage);
 			Console.WriteLine("Davon unentschuldigt: " + unentschuldigteFehltage);
 			bool versetzt = Versetzung(noten, unentschuldigteFehltage);
@@ -93,13 +94,14 @@ namespace Zeugnisse
 			{
 			string path = "C:\\Users\\schulung.SCHULUNGNB-03\\Documents\\SPT-2022-Gruppe-4\\Zeugnis.txt";
 			StreamWriter writer = new StreamWriter(path);
-			writer.WriteLine("\n\n" + name + " \n" + datum.ToString() + "\n");
+			writer.WriteLine("\n\n" + name + " \n" + datum.ToString("dd.MM.yyyy") + "\n");
 			for (int i = 0; i < 2; i++) {
 				writer.WriteLine(fächer[i] + "(LK) \t" + noten[i]);
 			}
 			for (int i = 2; i < 8; i++) {
 				writer.WriteLine(fächer[i] + "\t" + noten[i]);
 			}
+			writer.WriteLine("Notendurchschnitt: {0}", DurchschnittBerechnen(noten));
 			writer.WriteLine("Fehltage: " + fehltage);
 			writer.WriteLine("Davon unentschuldigt: " + unentschuldigteFehltage);
 			if (versetzt)
