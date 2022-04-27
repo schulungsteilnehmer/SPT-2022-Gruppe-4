@@ -1,16 +1,16 @@
 
 
-Gabi Schmidt 
-15.06.2022
+GG 
+20.01.2012 00:00:00
 
-Mathe(LK) 	4
-Physik(LK) 	7
-Englisch	15
-Tauchen	7
-Schwimmen	4
-Singen	3
-Luftfahrt	6
-Politik	8
-Fehltage: 17
-Davon unentschuldigt: 3
+Mathe(LK) 	14
+teq(LK) 	1
+f	1
+f	1
+f	1
+f	1
+f	1
+f	1
+Fehltage: 400
+Davon unentschuldigt: 200
 Schüler wird nicht versetzt.

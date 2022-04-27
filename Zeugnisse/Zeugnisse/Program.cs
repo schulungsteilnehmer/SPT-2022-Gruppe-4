@@ -18,12 +18,28 @@ namespace Zeugnisse
 	
 		public static void Main(string[] args)
 		{
-			string name;
+			string name = " ";
 			DateTime datum = new DateTime{};
 			List<string> fächer = new List<string>{};
 			List<int> noten = new List<int>{};
+			
+			bool nameWrong = true;
 			Console.WriteLine("Bitte geben Sie den Namen des Schühlers ein (z.B. Lasse Schmidt)");
-			name = Console.ReadLine();
+			while (nameWrong)
+			{				
+				name = Console.ReadLine();
+				nameWrong = false;
+				for (int i = 0; i < name.Length; i++) {
+					if (!(name[i] == ' ' || name[i] == '-' || Char.IsLetter(name[i])))
+					{
+						Console.WriteLine("Bitte nur gültige Namen eingeben!");
+						nameWrong = true;
+						break;
+					}
+				}
+				
+			}
+			
 			Console.WriteLine("Bitte geben Sie das Zeugnisausstellungsdatum ein (z.B. 14.03.2024)");
 			while (!DateTime.TryParse(Console.ReadLine(), out datum))
 			{
@@ -31,11 +47,13 @@ namespace Zeugnisse
 			}				
 			
 			for (int i = 0; i < 8; i++) {
+				// string illegalChars = "!@#$%^&*()@";
 				if(i==0)Console.WriteLine("Bitte geben Sie den Leistungkurs 1 ein.(z.B. Mathe)");
 				else if(i==1) Console.WriteLine("Bitte geben Sie den Leistungskurs 2 ein. (z.B. Deutsch)");
 				else Console.WriteLine("Bitte geben Sie einen Kurs ein. (z.B. Englisch)");
 				string input = Console.ReadLine();
 				fächer.Add(input);
+				
 				Console.WriteLine("Bitte geben die Note (0-15) für das Fach {0} ein.",input);
 				int note = -1;
 				while (!Int32.TryParse(Console.ReadLine(), out note) || !((note <= 15) && (note >= 0)))
@@ -44,10 +62,14 @@ namespace Zeugnisse
 				}	
 				noten.Add(note);
 			}
+			
 			Console.WriteLine("Bitte geben Sie die Fehltage des Schühlers ein (z.B.31)");
 			int fehltage = Int32.Parse(Console.ReadLine());
+			
 			Console.WriteLine("Bitte geben Sie die unentschuldigten Fehltage des Schühlers ein (z.B.31)");
 			int unentschuldigteFehltage = Int32.Parse(Console.ReadLine());
+			
+			
 			
 			
 			Console.WriteLine("\n\n" + name + " \n" + datum + "\n");
